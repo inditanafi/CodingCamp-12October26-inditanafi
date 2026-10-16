@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <p id="greeting" class="greeting"></p>
+    <p id="clock" class="clock"></p>
+    <p id="date" class="date"></p>
+  </header>
+  <main class="main-grid">
+    <section class="card timer-card" aria-label="Focus Timer">
+      <h2 class="section-title">Focus Timer</h2>
+      <div id="timer-display" class="timer-display">25:00</div>
+      <p id="timer-status" class="timer-status">Ready</p>
+      <div class="timer-buttons">
+        <button id="timer-start" class="btn btn-accent">Start</button>
+        <button id="timer-pause" class="btn btn-muted">Pause</button>
+        <button id="timer-reset" class="btn btn-muted">Reset</button>
+      </div>
+    </section>
+    <section class="card todo-card" aria-label="To-Do List">
+      <h2 class="section-title">To-Do List</h2>
+      <div class="todo-input-row">
+        <input id="todo-input" class="text-input" type="text" placeholder="Add a new task..." aria-label="New task" />
+        <button id="todo-add" class="btn btn-accent">Add</button>
+      </div>
+      <p id="todo-count" class="todo-count">No tasks yet</p>
+      <ul id="todo-list" class="todo-list" aria-label="Task list"></ul>
+    </section>
+  </main>
+  <section class="card links-card" aria-label="Quick Links">
+    <div class="links-header">
+      <h2 class="section-title">Quick Links</h2>
+      <button id="add-link-btn" class="btn btn-accent btn-sm">+ Add Link</button>
+    </div>
+    <div id="add-link-form" class="add-link-form hidden" role="form" aria-label="Add new link">
+      <input id="link-name-input" class="text-input" type="text" placeholder="Name (e.g. GitHub)" aria-label="Link name" />
+      <input id="link-url-input" class="text-input" type="url" placeholder="URL" aria-label="Link URL" />
+      <div class="form-actions">
+        <button id="link-save-btn" class="btn btn-accent btn-sm">Save</button>
+        <button id="link-cancel-btn" class="btn btn-muted btn-sm">Cancel</button>
+      </div>
+    </div>
+    <div id="links-grid" class="links-grid"></div>
+  </section>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
